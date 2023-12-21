@@ -1,8 +1,4 @@
-Security Team 
-
-
 name: Run sastcli.js
-
 on:
   push:
     branches: [ testing ]
