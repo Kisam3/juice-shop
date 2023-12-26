@@ -1,6 +1,6 @@
 name: Run sastcli.js
 on:
-  push:
+  pull_request:
     branches: [ testing ]
 
 jobs:
